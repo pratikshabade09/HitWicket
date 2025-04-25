@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #00008B;
+      background-image: url('https://static.toiimg.com/thumb/msid-80304005,width-1280,height-720,resizemode-4/80304005.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to enhance text visibility */
+    }
+
+    .signup-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 400px;
+      color: #0077b6;
+      transition: transform 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .signup-container:hover {
+      transform: scale(1.02);
+    }
+
+    .signup-container h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #0077b6;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #023e8a;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #90e0ef;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #f1faff;
+      color: #023e8a;
+      transition: border-color 0.3s, background-color 0.3s;
+    }
+
+    .form-group input:focus, .form-group select:focus {
+      outline: none;
+      border-color: #00b4d8;
+      background-color: #e0f7ff;
+    }
+
+    .signup-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #00b4d8;
+      border: none;
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .signup-btn:hover {
+      background-color: #0096c7;
+      transform: translateY(-2px);
+    }
+
+    .login-link {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 14px;
+      color: #000000;
+    }
+
+    .login-link a {
+      color: #0077b6;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .login-link a:hover {
+      color: #023e8a;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" >
+      </div>
+      <div class="form-group">
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname" >
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile No</label>
+        <input type="text" id="mobile" name="mobile" pattern="\d{10}"  title="Please enter a valid 10-digit mobile number">
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="1" max="120" >
+      </div>
+      <!-- <div class="form-group">
+        <label for="base-price">Base Price (in INR)</label>
+        <input type="number" id="base-price" name="base-price" min="1000000" step="100000" required>
+        <small>Start from 10 lac, increase in increments of 1 lac</small>
+      </div> -->
+      <div class="form-group">
+        <label for="player-type">Player Type</label>
+        <select id="player-type" name="player-type" required>
+          <option value="batter">Batter</option>
+          <option value="bowler">Bowler</option>
+          <option value="allrounder">Allrounder</option>
+          <option value="wicketkeeper">Wicketkeeper</option>
+        </select>
+      </div>
+      <!-- <a href="webtech.html">   -->
+      <button type="submit" class="signup-btn"><a href="webtech.html">Sign Up</a></button>
+    </form>
+    <div class="login-link">
+      <strong>Already have an account?</strong> <a href="login.html">Login</a>
+    </div>
+  </div>
+</body>
+</html>
